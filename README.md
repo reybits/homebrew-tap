@@ -7,13 +7,13 @@ This repository provides a Homebrew tap with custom CLI tools and utilities deve
 First, add the tap:
 
 ```sh
-brew tap andreyugolnik/homebrew-tap
+brew tap reybits/homebrew-tap
 ```
 
 Then, install a specific tool:
 
 ```sh
-brew install andreyugolnik/toolname
+brew install reybits/toolname
 ```
 
 ## Available Tools
@@ -34,13 +34,13 @@ brew update && brew upgrade
 To remove a tool:
 
 ```sh
-brew uninstall andreyugolnik/toolname
+brew uninstall reybits/toolname
 ```
 
 To remove the tap:
 
 ```sh
-brew untap andreyugolnik/homebrew-tap
+brew untap reybits/homebrew-tap
 ```
 
 ## Contributing

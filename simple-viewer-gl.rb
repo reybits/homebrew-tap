@@ -3,10 +3,10 @@
 
 class SimpleViewerGl < Formula
 	desc "Simple Viewer GL is a simple and tiny image viewer based on OpenGL."
-	homepage "https://github.com/andreyugolnik/simple-viewer-gl"
-	url "https://github.com/andreyugolnik/simple-viewer-gl/archive/v3.2.1.tar.gz"
+	homepage "https://github.com/reybits/simple-viewer-gl"
+	url "https://github.com/reybits/simple-viewer-gl/archive/v3.2.1.tar.gz"
 	sha256 "54b6d00192dee70d9583ee2aca93299fc36bad8bc5c6c98eb4e69a242c0d48c8" # optional
-	head "https://github.com/andreyugolnik/simple-viewer-gl.git", branch: "master"
+	head "https://github.com/reybits/simple-viewer-gl.git", branch: "master"
 
 	depends_on "cmake"
 	depends_on "glfw"

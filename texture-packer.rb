@@ -3,8 +3,8 @@
 
 class TexturePacker < Formula
 	desc "Texture Packer efficiently packs images into a texture atlas, reducing memory usage and improving rendering performance for games and applications."
-	homepage "https://github.com/andreyugolnik/texture-packer"
-	head "https://github.com/andreyugolnik/texture-packer.git", branch: "master"
+	homepage "https://github.com/reybits/texture-packer"
+	head "https://github.com/reybits/texture-packer.git", branch: "master"
 
 	depends_on "cmake" => :build
 
