@@ -13,13 +13,13 @@ brew tap reybits/homebrew-tap
 Then, install a specific tool:
 
 ```sh
-brew install reybits/tap/toolname
+brew install reybits/homebrew-tap/<toolname>
 ```
 
 ## Available Tools
 
-- `simple-viewer-gl` – Simple Viewer GL is a simple and tiny image viewer based on OpenGL.
-- `texture-packer` – Texture Packer efficiently packs images into a texture atlas.
+- `simple-viewer-gl` – Simple and tiny image viewer based on OpenGL.
+- `texture-packer` – CLI tool that packs multiple images into optimized texture atlases.
 
 ## Updating
 
@@ -34,7 +34,7 @@ brew update && brew upgrade
 To remove a tool:
 
 ```sh
-brew uninstall reybits/tap/toolname
+brew uninstall reybits/homebrew-tap/<toolname>
 ```
 
 To remove the tap:
@@ -50,5 +50,4 @@ Feel free to open an issue or a pull request if you have suggestions or improvem
 ## License
 
 All tools and scripts in this repository are licensed under MIT License.
-
 
