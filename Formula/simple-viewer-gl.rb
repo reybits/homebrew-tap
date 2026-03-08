@@ -1,13 +1,13 @@
 # https://docs.brew.sh/Formula-Cookbook
 # https://rubydoc.brew.sh/Formula
 #
-# Author: 2024 Andrey <https://github.com/reybits>
+# Author: 2026 Andrey <https://github.com/reybits>
 
 class SimpleViewerGl < Formula
   desc "Simple and tiny image viewer based on OpenGL"
   homepage "https://github.com/reybits/simple-viewer-gl"
-  url "https://github.com/reybits/simple-viewer-gl/archive/refs/tags/v3.2.4.tar.gz"
-  sha256 "54406af9dda99b30d94f9bf3fe7e21882bb9b14adbad4e8851cc2b628d1ad459" # optional
+  url "https://github.com/reybits/simple-viewer-gl/archive/refs/tags/v3.2.7.tar.gz"
+  sha256 "4f4a146efb6af1c9f22e78aa6a85d5b32d79ec957b06a3c0b404d5f1ef7c7dcd" # optional
   head "https://github.com/reybits/simple-viewer-gl.git", branch: "master"
   #   tag:      "v3.2.4",
   #   revision: ""
