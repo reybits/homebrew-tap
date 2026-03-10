@@ -4,64 +4,45 @@
 # Author: 2026 Andrey <https://github.com/reybits>
 
 class SimpleViewerGl < Formula
-  desc "Simple and tiny image viewer based on OpenGL"
+  desc "Lightweight hardware-accelerated image viewer using OpenGL"
   homepage "https://github.com/reybits/simple-viewer-gl"
-  url "https://github.com/reybits/simple-viewer-gl/archive/refs/tags/v3.2.7.tar.gz"
-  sha256 "4f4a146efb6af1c9f22e78aa6a85d5b32d79ec957b06a3c0b404d5f1ef7c7dcd" # optional
+  url "https://github.com/reybits/simple-viewer-gl/archive/refs/tags/v3.2.9.tar.gz"
+  sha256 "91fcef3acfa0a938ac757a2545642513b5f6312587d50ea183a911c3ffba5f88"
   head "https://github.com/reybits/simple-viewer-gl.git", branch: "master"
-  #   tag:      "v3.2.4",
-  #   revision: ""
-  # version "3.2.4"
   license "GPL-2.0-only"
 
   depends_on "cmake" => :build
+  depends_on "pkg-config" => :build
   depends_on "glfw"
-  depends_on "giflib" # recommended
-  depends_on "jpeg"
-  depends_on "libexif" # recommended
+  depends_on "jpeg-turbo"
   depends_on "libpng"
-  depends_on "libtiff" # recommended
-  depends_on "little-cms2" # recommended
-  depends_on "openexr" # recommended
-  depends_on "openjpeg" # recommended
-  depends_on "pkg-config"
-  depends_on "webp" # recommended
   uses_from_macos "curl"
   uses_from_macos "zlib"
 
+  # recommended optional deps — all available via Homebrew
+  depends_on "giflib"
+  depends_on "libexif"
+  depends_on "libtiff"
+  depends_on "little-cms2"
+  depends_on "openexr"
+  depends_on "openjpeg"
+  depends_on "webp"
+
   def install
-    # Build the project using make
     system "make", "release"
 
-    # Copy the .app to the prefix
     prefix.install "Simple Viewer GL.app"
-
-    # Create an executable script for bin
     bin.write_exec_script "#{prefix}/Simple Viewer GL.app/Contents/MacOS/sviewgl"
+  end
 
-    # Informational message for the user
-    ohai "Optional step: link the app to /Applications for convenience"
-    puts <<~EOS
-      \tTo link the app to /Applications, run:
-      \t\e[32msudo ln -s '#{prefix}/Simple Viewer GL.app' '/Applications/Simple Viewer GL'\e[0m
+  def caveats
+    <<~EOS
+      To link the app to /Applications, run:
+        ln -sf '#{prefix}/Simple Viewer GL.app' '/Applications/Simple Viewer GL.app'
     EOS
-
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
-    # system "cmake", "--build", "build"
-    # system "cmake", "--install", "build"
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test simple-viewer-gl`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
-    # system "false"
     system "#{bin}/sviewgl", "--version"
   end
 end
