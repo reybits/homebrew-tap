@@ -6,8 +6,8 @@
 class SimpleViewerGl < Formula
   desc "Lightweight hardware-accelerated image viewer using OpenGL"
   homepage "https://github.com/reybits/simple-viewer-gl"
-  url "https://github.com/reybits/simple-viewer-gl/archive/refs/tags/v3.2.9.tar.gz"
-  sha256 "91fcef3acfa0a938ac757a2545642513b5f6312587d50ea183a911c3ffba5f88"
+  url "https://github.com/reybits/simple-viewer-gl/archive/refs/tags/v3.3.1.tar.gz"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   head "https://github.com/reybits/simple-viewer-gl.git", branch: "master"
   license "GPL-2.0-only"
 
@@ -25,6 +25,7 @@ class SimpleViewerGl < Formula
   depends_on "libtiff"
   depends_on "little-cms2"
   depends_on "openexr"
+  depends_on "libheif"
   depends_on "openjpeg"
   depends_on "webp"
 
