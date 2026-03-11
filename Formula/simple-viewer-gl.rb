@@ -6,8 +6,8 @@
 class SimpleViewerGl < Formula
   desc "Lightweight hardware-accelerated image viewer using OpenGL"
   homepage "https://github.com/reybits/simple-viewer-gl"
-  url "https://github.com/reybits/simple-viewer-gl/archive/refs/tags/v3.3.1.tar.gz"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  url "https://github.com/reybits/simple-viewer-gl/archive/refs/tags/v3.3.2.tar.gz"
+  sha256 "43f31b5e105fdfc5a62d47812cd5e69c10ae05f5dc1aa6723f2160ca19b719a5"
   head "https://github.com/reybits/simple-viewer-gl.git", branch: "master"
   license "GPL-2.0-only"
 
