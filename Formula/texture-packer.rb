@@ -6,8 +6,8 @@
 class TexturePacker < Formula
   desc "CLI tool that packs multiple images into optimized texture atlases"
   homepage "https://github.com/reybits/texture-packer"
-  url "https://github.com/reybits/texture-packer/archive/refs/tags/v1.4.0.tar.gz"
-  sha256 "57ed596d6c5f6b4308d8e07d1ea3cf49aa0aa50f20e574518780a379a2e20737"
+  url "https://github.com/reybits/texture-packer/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "6cfc9554e30ec4f62b169c2c38ffc317e94b781ea0e2e5066bbcd1b64657eb99"
   license "MIT"
   head "https://github.com/reybits/texture-packer.git", branch: "master"
 
